@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="580.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.devjava.controller.Animateur_formationController">
+   <children>
+      <TableView fx:id="fortable" layoutX="243.0" layoutY="194.0" onMouseClicked="#getSelected" prefHeight="214.0" prefWidth="483.0">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="datedebut" prefWidth="89.0" text="DATE DEBUT" />
+            <TableColumn fx:id="datefin" prefWidth="91.0" text="DATE FIN" />
+            <TableColumn fx:id="titre" prefWidth="117.0" text="TITRE" />
+            <TableColumn fx:id="description" prefWidth="110.0" text="DESCRIPTION" />
+         </columns>
+      </TableView>
+      <Button fx:id="affecter" layoutX="73.0" layoutY="239.0" mnemonicParsing="false" onAction="#affecter" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #4CC395;" text="AFFECTER" textFill="WHITE">
+         <effect>
+            <InnerShadow color="WHITE" />
+         </effect></Button>
+      <Button fx:id="consulter" layoutX="73.0" layoutY="289.0" mnemonicParsing="false" onAction="#consulter" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #CC2727;" text="CONSULTER" textFill="WHITE">
+         <effect>
+            <InnerShadow color="WHITE" />
+         </effect></Button>
+      <TextField fx:id="yarab" layoutX="610.0" layoutY="166.0" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="back" layoutX="38.0" layoutY="533.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #E56B10;">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <InnerShadow color="#fffdfd" />
+         </effect></Button>
+      <Button fx:id="refresh" layoutX="662.0" layoutY="408.0" mnemonicParsing="false" onAction="#refresh" style="-fx-background-color: #E56B10;" text="REFRESH" textFill="WHITE">
+         <effect>
+            <InnerShadow color="#eeeeee" />
+         </effect></Button>
+      <Button fx:id="supprimer" layoutX="73.0" layoutY="338.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #4973AB;" text="SUPPRIMER" textFill="WHITE">
+         <effect>
+            <InnerShadow color="WHITE" />
+         </effect></Button>
+      <Pane layoutX="26.0" layoutY="46.0" prefHeight="80.0" prefWidth="722.0" style="-fx-background-color: #FFC125;">
+         <children>
+            <Label layoutX="59.0" layoutY="8.0" prefHeight="64.0" prefWidth="605.0" text="AFFECTATION DES FORMATIONS" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#fffefe" />
+               </effect>
+            </Label>
+            <ImageView fitHeight="52.0" fitWidth="63.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Image/Icon1Fichier%201.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <InnerShadow color="#fffdfd" />
+         </effect>
+      </Pane>
+      <Text layoutX="501.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID D'ANIMATEUR" wrappingWidth="143.314453125" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="442.0" prefWidth="571.0" stylesheets="@table.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.devjava.controller.AfficherSuiviController">
+   <children>
+      <TableView fx:id="tab" layoutX="47.0" layoutY="77.0" prefHeight="306.0" prefWidth="482.0">
+        <columns>
+          <TableColumn fx:id="id" minWidth="2.0" prefWidth="34.0" text="id" />
+          <TableColumn fx:id="francais" prefWidth="87.0" text="francais" />
+            <TableColumn fx:id="anglais" prefWidth="104.0" text="anglais" />
+            <TableColumn fx:id="info" prefWidth="75.0" text="info" />
+            <TableColumn fx:id="evaluation" prefWidth="94.0" text="evaluation" />
+            <TableColumn fx:id="dn" prefWidth="87.0" text="date" />
+        </columns>
+      </TableView>
+      <ToolBar layoutX="-3.0" layoutY="-6.0" prefHeight="48.0" prefWidth="578.0">
+         <items>
+            <Button mnemonicParsing="false" onAction="#Ajouter" text="ajouter">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/img/save.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#modSuivi" text="modifier">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/img/edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#supprimer" text="spprimer">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/img/delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="pdf" mnemonicParsing="false" onAction="#pdfGenarate" text="pdf">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/img/pdf.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

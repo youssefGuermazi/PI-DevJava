@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="frame" prefHeight="402.0" prefWidth="638.0" stylesheets="@../ressources/css/dark-theme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.devjava.controller.AfficheUserController">
+   <children>
+      <Label fx:id="inscrirLabel" layoutX="195.0" layoutY="5.0" prefHeight="54.0" prefWidth="225.0" text="Liste des utilisateurs" textFill="#213fa1">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="22.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="Delete" buttonType="RAISED" layoutX="240.0" layoutY="330.0" onMouseClicked="#Delete" prefHeight="25.0" prefWidth="136.0" ripplerFill="#4d2fd6" style="-fx-background-color: #4d2fd6;" text="Supprimer" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <ImageView fx:id="close" fitHeight="25.0" fitWidth="25.0" layoutX="603.0" layoutY="7.0" onMouseClicked="#closeApplication" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/if_icon-close-round_211651.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="table" layoutX="66.0" layoutY="86.0" prefHeight="220.0" prefWidth="495.0">
+        <columns>
+          <TableColumn fx:id="nom" prefWidth="150.0" text="nom" />
+          <TableColumn fx:id="mail" minWidth="0.0" prefWidth="153.0" text="mail" />
+            <TableColumn fx:id="role" prefWidth="179.0" text="role" />
+        </columns>
+      </TableView>
+    
+   
+   </children>
+</AnchorPane>

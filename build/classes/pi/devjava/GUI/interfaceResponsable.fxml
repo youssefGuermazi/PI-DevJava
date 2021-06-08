@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="frame" prefHeight="484.0" prefWidth="746.0" stylesheets="@../ressources/css/dark-theme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.devjava.controller.interfaceResponsableController">
+   <children>
+      <ImageView fx:id="view1" fitHeight="197.0" fitWidth="201.0" layoutX="273.0" layoutY="103.0" onMouseClicked="#ChargeImage" pickOnBounds="true">
+         <image>
+            <Image url="@../images/img.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="inscrirLabel" layoutX="346.0" layoutY="39.0" prefHeight="54.0" prefWidth="250.0" text="Responsable Garderie" textAlignment="CENTER" textFill="#213fa1">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="nomt" focusColor="#ababab" labelFloat="true" layoutX="495.0" layoutY="154.0" prefHeight="27.0" prefWidth="195.0" promptText="Nom" unFocusColor="#a8a8a8">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="Modifier" buttonType="RAISED" layoutX="513.0" layoutY="304.0" onAction="#save" onMouseClicked="#Modifier" prefHeight="25.0" prefWidth="136.0" ripplerFill="#4d2fd6" style="-fx-background-color: #4d2fd6;" text="Enregistrer" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <ImageView fx:id="close" fitHeight="25.0" fitWidth="25.0" layoutX="707.0" layoutY="14.0" onMouseClicked="#closeApplication" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/if_icon-close-round_211651.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="telt" focusColor="#ababab" labelFloat="true" layoutX="495.0" layoutY="197.0" prefHeight="27.0" prefWidth="195.0" promptText="Numéro Tel" unFocusColor="#a8a8a8">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="adresset" focusColor="#ababab" labelFloat="true" layoutX="495.0" layoutY="242.0" prefHeight="27.0" prefWidth="195.0" promptText="Adresse" unFocusColor="#a8a8a8">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fx:id="view2" fitHeight="177.0" fitWidth="195.0" layoutX="276.0" layoutY="97.0" onMouseClicked="#ChangeImage" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="labelImage" layoutX="288.0" layoutY="299.0" prefHeight="17.0" prefWidth="200.0" textFill="#016f19" />
+      <Label fx:id="nom" layoutX="495.0" layoutY="159.0" prefHeight="27.0" prefWidth="195.0" text="nom" />
+      <Label fx:id="mail" layoutX="495.0" layoutY="120.0" prefHeight="25.0" prefWidth="195.0" text="mail" />
+      <Label fx:id="telephone" layoutX="495.0" layoutY="201.0" prefHeight="25.0" prefWidth="195.0" text="telephone" />
+      <Label fx:id="adres" layoutX="495.0" layoutY="242.0" prefHeight="27.0" prefWidth="195.0" text="Adresse" />
+      <JFXTextField fx:id="mailt" focusColor="#ababab" labelFloat="true" layoutX="495.0" layoutY="107.0" prefHeight="27.0" prefWidth="195.0" promptText="Mail" unFocusColor="#a8a8a8">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <ImageView fx:id="defimage" fitHeight="150.0" fitWidth="200.0" layoutX="299.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Photo.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="6.0" layoutY="6.0" prefHeight="474.0" prefWidth="243.0" style="-fx-background-color: pink;">
+         <children>
+            <JFXButton fx:id="affprof" layoutY="22.0" onAction="#affprof" prefHeight="54.0" prefWidth="244.0" text="Mon Profil" />
+            <JFXButton fx:id="profButton" layoutY="76.0" onAction="#updateprof" prefHeight="54.0" prefWidth="244.0" text="Modifier Profil" />
+            <JFXButton fx:id="gardButton" layoutX="5.0" layoutY="130.0" onAction="#affgard" prefHeight="54.0" prefWidth="244.0" text="Ma Garderie" />
+            <JFXButton fx:id="clubButton" layoutX="5.0" layoutY="184.0" onAction="#affClub" prefHeight="54.0" prefWidth="244.0" text="Mes clubs" />
+            <JFXButton fx:id="eventButton" layoutX="5.0" layoutY="237.0" onAction="#affEven" prefHeight="54.0" prefWidth="244.0" text="Mes evenemnts" />
+            <JFXButton fx:id="animButton" layoutX="5.0" layoutY="291.0" onAction="#affsui" prefHeight="54.0" prefWidth="244.0" text="Gestion de suivi" />
+            <JFXButton fx:id="formtionButton" layoutX="5.0" layoutY="345.0" onAction="#affForm" prefHeight="54.0" prefWidth="244.0" text="Mes formations" />
+            <JFXButton fx:id="decButton" buttonType="RAISED" layoutX="14.0" layoutY="417.0" onAction="#deconect" prefHeight="43.0" prefWidth="92.0" ripplerFill="#dd2525" text="Déconnexion" textFill="#f80909" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="mail1" layoutX="495.0" layoutY="95.0" prefHeight="25.0" prefWidth="195.0" text="mail:" />
+      <Label fx:id="nom1" layoutX="495.0" layoutY="141.0" prefHeight="27.0" prefWidth="195.0" text="nom:" />
+      <Label fx:id="telephone1" layoutX="495.0" layoutY="185.0" prefHeight="25.0" prefWidth="195.0" text="telephone:" />
+      <Label fx:id="adres1" layoutX="495.0" layoutY="229.0" prefHeight="27.0" prefWidth="195.0" text="Adresse:" />
+    
+   
+   </children>
+</AnchorPane>

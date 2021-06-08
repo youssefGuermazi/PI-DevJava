@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="416.0" prefWidth="652.0"  xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.devjava.controller.AfficherClubFrontController">
+    
+ <children>
+       <Text fill="#ffa100" layoutX="107.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List desClubs" wrappingWidth="293.35369873046875">
+            <font>
+            <Font size="30.0" />
+            </font>
+       </Text>
+      <TableView fx:id="ClubTable" layoutX="197.0" layoutY="110.0" prefHeight="264.0" prefWidth="406.0">
+         <columns>
+                 
+          <TableColumn fx:id="clubName" prefWidth="114.0" text="Nom Club" />
+            <TableColumn fx:id="desc" prefWidth="160.79998779296875" text="Description" />
+            <TableColumn fx:id="date" prefWidth="129.59988403320312" text="Date Creation" />
+         </columns>
+      </TableView>
+     
+      <Button fx:id="Evenement" layoutX="40.0" layoutY="149.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed3" style="-fx-background-color: #39A67F;" text="List Evenement" textFill="WHITE" />
+  <Button fx:id="Club" layoutX="40.0" layoutY="215.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed4" prefHeight="26.0" prefWidth="96.0" style="-fx-background-color: #39A67F;" text="List Clubs" textFill="WHITE" />
+      <ImageView fitHeight="65.0" fitWidth="112.0" layoutX="40.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/favicon.png" />
+         </image>
+      </ImageView>
+    
+ </children>
+</AnchorPane>

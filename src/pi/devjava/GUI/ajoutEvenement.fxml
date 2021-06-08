@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.devjava.controller.AjoutEvenementController">
+    <children>
+      <Text fill="#16cabd" layoutX="205.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Event">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="nom" focusColor="#3f4d4c" layoutX="84.0" layoutY="215.0" prefHeight="31.0" prefWidth="150.0" unFocusColor="#16cabd" />
+       <JFXTextField fx:id="description" focusColor="#3f4d4c" layoutX="126.0" layoutY="280.0" prefHeight="31.0" prefWidth="381.0" unFocusColor="#16cabd" />
+       <JFXDatePicker fx:id="date_debut" layoutX="376.0" layoutY="87.0" />
+      <JFXButton fx:id="AddButton" layoutX="43.0" layoutY="336.0" onMouseClicked="#AddButton" prefHeight="31.0" prefWidth="233.0" style="-fx-background-color: #39A67F;" text="Add Evenement" textFill="WHITE" />
+      <JFXButton fx:id="affich" layoutX="336.0" layoutY="336.0" onMouseClicked="#retour" prefHeight="31.0" prefWidth="234.0" style="-fx-background-color: #39A67F;" text="Afficher Evenements" textFill="WHITE" />
+      <JFXComboBox fx:id="club_evenement" layoutX="84.0" layoutY="132.0" prefWidth="150.0" />
+      <JFXDatePicker fx:id="date_fin" layoutX="376.0" layoutY="145.0" />
+      <JFXButton fx:id="img" layoutX="373.0" layoutY="233.0" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: #262626;" text="Image..." textFill="WHITE">
+          <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="126.0" layoutY="101.0" text="Nom Club" textFill="#16cabd">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="105.0" layoutY="190.0" text="Nom Evenement" textFill="#16cabd">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="286.0" text="Description" textFill="#16cabd">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="291.0" layoutY="105.0" text="Date Debut" textFill="#16cabd">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="301.0" layoutY="163.0" text="Date Fin" textFill="#16cabd">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+       <ImageView fx:id="imgButton" fitHeight="89.0" fitWidth="108.0" layoutX="369.0" layoutY="202.0" onMouseClicked="#addImage" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="close" fitHeight="25.0" fitWidth="25.0" layoutX="558.0" layoutY="14.0" onMouseClicked="#closeApplication" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/if_icon-close-round_211651.png" />
+         </image>
+      </ImageView>
+     
+   </children>
+</AnchorPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="580.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.devjava.controller.utController">
+   <children>
+      <Button fx:id="add" layoutX="121.0" layoutY="166.0" mnemonicParsing="false" onAction="#add" prefHeight="93.0" prefWidth="233.0" style="-fx-background-color: #4CC395;" stylesheets="@../Utilis/eventgui.css" text="AJOUTER UTILISATEUR" textFill="WHITE">
+         <effect>
+            <InnerShadow color="#fffdfd" />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/ajouter-icone-5952-128.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="delete" layoutX="121.0" layoutY="318.0" mnemonicParsing="false" onAction="#delete" prefHeight="93.0" prefWidth="233.0" style="-fx-background-color: #4973AB;" text="CONSULTER LA LISTE DES UTILISATEURS" textFill="WHITE">
+         <effect>
+            <InnerShadow color="#f5f2f2" />
+         </effect></Button>
+      <Pane layoutX="13.0" layoutY="14.0" prefHeight="80.0" prefWidth="735.0" style="-fx-background-color: #FFC125;">
+         <children>
+            <Label layoutX="149.0" layoutY="8.0" prefHeight="64.0" prefWidth="467.0" text="Gestions Des Utilisateurs" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#fffefe" />
+               </effect>
+            </Label>
+            <ImageView fitHeight="52.0" fitWidth="63.0" layoutX="117.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Image/Icon1Fichier%201.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <InnerShadow color="#fffdfd" />
+         </effect>
+      </Pane>
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="575.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

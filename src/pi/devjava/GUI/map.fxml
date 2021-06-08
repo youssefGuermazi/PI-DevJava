@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="577.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.devjava.controller.MapController">
+   <children>
+      <WebView fx:id="wv" layoutX="16.0" layoutY="14.0" prefHeight="554.0" prefWidth="533.0" />
+      <Label fx:id="lc" layoutX="27.0" layoutY="580.0" prefHeight="17.0" prefWidth="78.0" text="adresse:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="adr" editable="false" layoutX="105.0" layoutY="582.0" prefHeight="25.0" prefWidth="368.0" />
+      <JFXButton fx:id="valider" layoutX="497.0" layoutY="582.0" onMouseClicked="#retAj" text="Valider" />
+   </children>
+</AnchorPane>

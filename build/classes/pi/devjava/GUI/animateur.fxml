@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="580.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.devjava.controller.AnimateurController">
+   <children>
+      <TableView fx:id="anitable" layoutX="142.0" layoutY="341.0" onMouseClicked="#getSelected" prefHeight="200.0" prefWidth="604.0">
+         <columns>
+            <TableColumn fx:id="cin" prefWidth="144.0" text="CIN" />
+            <TableColumn fx:id="nom" prefWidth="121.0" text="NOM" />
+            <TableColumn fx:id="prenom" prefWidth="114.0" text="PRENOM" />
+            <TableColumn fx:id="activiter" prefWidth="107.0" text="ACTIVITER" />
+            <TableColumn fx:id="image" prefWidth="117.0" text="IMAGE" />
+         </columns>
+      </TableView>
+      <TextField fx:id="prenomfield" layoutX="125.0" layoutY="216.0" promptText="Prenom" />
+      <Button fx:id="add" layoutX="604.0" layoutY="135.0" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #4CC395;" text="AJOUTER" textFill="#eeecec">
+         <effect>
+            <InnerShadow color="#e8d2d2" />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/ajouter-icone-5952-128.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="edit" layoutX="604.0" layoutY="167.0" mnemonicParsing="false" onAction="#edit" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #CC2727;" text="MODIFR" textFill="WHITE">
+         <effect>
+            <InnerShadow color="#fff0f0" />
+         </effect></Button>
+      <Button fx:id="delete" layoutX="604.0" layoutY="204.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #4973AB;" text="SUPPRIMER" textFill="WHITE">
+         <effect>
+            <InnerShadow color="WHITE" />
+         </effect></Button>
+      <TextField fx:id="nomfield" layoutX="125.0" layoutY="179.0" promptText="Nom" />
+      <TextField fx:id="cinfield" layoutX="125.0" layoutY="135.0" promptText="Cin" />
+      <TextField fx:id="activiterfield" layoutX="125.0" layoutY="257.0" promptText="Activiter" />
+      <Button fx:id="affecter" layoutX="26.0" layoutY="416.0" mnemonicParsing="false" onAction="#affecter" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #4CC395;" text="AFFECTER" textFill="WHITE">
+         <effect>
+            <InnerShadow color="#ebeaea" />
+         </effect></Button>
+      <Button fx:id="imagefield" layoutX="317.0" layoutY="257.0" mnemonicParsing="false" onAction="#upload" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #E56B10;" text="IMAGE" textFill="WHITE">
+         <effect>
+            <InnerShadow color="WHITE" />
+         </effect></Button>
+      <TextField fx:id="search" layoutX="577.0" layoutY="303.0" promptText="recherche.." />
+      <Button fx:id="Google" layoutX="28.0" layoutY="456.0" mnemonicParsing="false" onAction="#Google" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #E56B10;" text="GOOGLE" textFill="WHITE">
+         <effect>
+            <InnerShadow color="WHITE" />
+         </effect></Button>
+      <Pane layoutX="22.0" layoutY="31.0" prefHeight="80.0" prefWidth="735.0" style="-fx-background-color: #FFC125;">
+         <children>
+            <Label layoutX="203.0" layoutY="8.0" prefHeight="64.0" prefWidth="467.0" text="Gestions Des Animateurs" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#fffefe" />
+               </effect>
+            </Label>
+            <ImageView fitHeight="52.0" fitWidth="63.0" layoutX="117.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Image/Icon1Fichier%201.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <InnerShadow color="#fffdfd" />
+         </effect>
+      </Pane>
+      <Text layoutX="30.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CIN :" wrappingWidth="53.201171875" />
+      <Text layoutX="32.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOM :" />
+      <Text layoutX="31.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRENOM:" />
+      <Text layoutX="32.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ACTIVITE :" wrappingWidth="65.54296875" />
+   </children>
+</AnchorPane>

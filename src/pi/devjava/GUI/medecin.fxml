@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="590.0" prefWidth="756.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.devjava.controller.MedecinController">
+   <children>
+      <Pane layoutX="11.0" layoutY="125.0" prefHeight="165.0" prefWidth="525.0">
+         <children>
+            <Label layoutX="288.0" layoutY="83.0" text="Image:" />
+            <ComboBox fx:id="combo" layoutX="356.0" layoutY="32.0" prefHeight="25.0" prefWidth="149.0" promptText="spécialité" style="-fx-background-color: white;" />
+            <Label layoutX="288.0" layoutY="37.0" text="Specialite:" />
+         </children>
+      </Pane>
+      <TextField fx:id="tfcin" layoutX="91.0" layoutY="141.0" promptText="cin" />
+      <TextField fx:id="tfnom" layoutX="91.0" layoutY="187.0" promptText="nom" />
+      <TextField fx:id="tfprenom" layoutX="91.0" layoutY="233.0" promptText="prenom" />
+      <Button layoutX="634.0" layoutY="141.0" mnemonicParsing="false" onAction="#Ajouter" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #4CC395;" text="Add" textFill="WHITE" />
+      <Label layoutX="29.0" layoutY="145.0" text="Cin:" />
+      <Label layoutX="24.0" layoutY="191.0" text="Nom:" />
+      <Label layoutX="26.0" layoutY="237.0" text="Prenom:" />
+      <GridPane layoutX="8.0" layoutY="341.0" prefHeight="218.0" prefWidth="740.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="758.0" minWidth="10.0" prefWidth="758.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="0.0" prefWidth="0.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="376.0" minHeight="10.0" prefHeight="376.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="23.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TableView fx:id="tab" prefHeight="145.0" prefWidth="664.0">
+              <columns>
+                <TableColumn fx:id="cinT" prefWidth="131.0" text="Cin" />
+                <TableColumn fx:id="nomT" onEditCommit="#Change_Nom" prefWidth="141.0" text="Nom" />
+                  <TableColumn fx:id="prenonT" minWidth="0.0" onEditCommit="#Change_Prenom" prefWidth="154.0" text="Prenom" />
+                  <TableColumn fx:id="specialiteT" onEditCommit="#Change_Specialite" prefWidth="153.0" text="Specialite" />
+                  <TableColumn fx:id="imageT" onEditCommit="#Change_Image" prefWidth="178.0" text="Image" />
+              </columns>
+            </TableView>
+         </children>
+      </GridPane>
+      <Button fx:id="supprimer" layoutX="634.0" layoutY="179.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #CC2727;" text="Delete" textFill="WHITE" />
+      <Pane layoutX="7.0" layoutY="30.0" prefHeight="80.0" prefWidth="753.0" style="-fx-background-color: #FFC125;">
+         <children>
+            <Label layoutX="203.0" layoutY="8.0" prefHeight="64.0" prefWidth="410.0" text="Gestions Des Médecins" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="52.0" fitWidth="63.0" layoutX="117.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Icon1Fichier%201.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fx:id="btnimage2" fitHeight="64.0" fitWidth="149.0" layoutX="369.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="634.0" layoutY="219.0" mnemonicParsing="false" onMouseClicked="#addImage" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #E56B10;" text="Upload" textFill="WHITE" />
+      <TextField fx:id="rechercher" layoutX="584.0" layoutY="302.0" prefHeight="25.0" prefWidth="156.0" promptText="Recherche..." />
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="720.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Icon3Fichier%203.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="pdf" layoutX="634.0" layoutY="258.0" mnemonicParsing="false" onMouseClicked="#pdf" prefHeight="25.0" prefWidth="60.0" style="-fx-background-color: #4973AB;" text="Pdf" textFill="WHITE" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="frame" prefHeight="402.0" prefWidth="638.0" stylesheets="@../ressources/css/dark-theme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.devjava.controller.addUserController">
+   <children>
+      <ImageView fitHeight="297.0" fitWidth="282.0" layoutX="27.0" layoutY="50.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/1200px-Creative-Tail-People-add-user.svg.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="inscrirLabel" layoutX="375.0" layoutY="32.0" prefHeight="54.0" prefWidth="195.0" text="Ajouter utilisateur" textAlignment="CENTER" textFill="#213fa1">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="username1" focusColor="#ababab" labelFloat="true" layoutX="367.0" layoutY="111.0" prefHeight="27.0" prefWidth="195.0" promptText="Mail" unFocusColor="#a8a8a8">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="username" focusColor="#ababab" labelFloat="true" layoutX="367.0" layoutY="153.0" prefHeight="27.0" prefWidth="195.0" promptText="Nom d'utilisateur" unFocusColor="#a8a8a8">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="password" focusColor="#ababab" labelFloat="true" layoutX="367.0" layoutY="198.0" prefHeight="27.0" prefWidth="195.0" promptText="Mot de passe" unFocusColor="#a8a8a8">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXPasswordField fx:id="password1" focusColor="#ababab" labelFloat="true" layoutX="367.0" layoutY="241.0" prefHeight="27.0" prefWidth="195.0" promptText="Confirmer Mot de passe" unFocusColor="#a8a8a8">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton fx:id="signupButton" buttonType="RAISED" layoutX="404.0" layoutY="335.0" onMouseClicked="#Signup" prefHeight="25.0" prefWidth="136.0" ripplerFill="#4d2fd6" style="-fx-background-color: #4d2fd6;" text="Ajouter" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <ImageView fx:id="close" fitHeight="25.0" fitWidth="25.0" layoutX="603.0" layoutY="7.0" onMouseClicked="#closeApplication" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/if_icon-close-round_211651.png" />
+         </image>
+      </ImageView>
+      <JFXComboBox fx:id="role" focusColor="#e03540" layoutX="367.0" layoutY="286.0" prefHeight="25.0" prefWidth="195.0" promptText="Choisir role" unFocusColor="#eee5e6" />
+    
+   
+   </children>
+</AnchorPane>

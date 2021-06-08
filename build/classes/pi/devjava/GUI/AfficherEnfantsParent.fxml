@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="428.0" prefWidth="670.0" stylesheets="@table.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pi.devjava.controller.AfficherEnfantsParentController">
+   <children>
+      <ToolBar layoutY="-6.0" prefHeight="40.0" prefWidth="670.0">
+         <items>
+            <Button fx:id="suivi" mnemonicParsing="false" onAction="#suivi" text="Afficher suivi">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/img/suivi.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="mod" mnemonicParsing="false" onAction="#modiifer" text="Modifier">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/img/edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="supp" mnemonicParsing="false" onAction="#suppression" text="Supprimer">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/img/delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </items>
+      </ToolBar>
+      <TableView fx:id="table" layoutX="25.0" layoutY="46.0" prefHeight="393.0" prefWidth="604.0">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+            <TableColumn fx:id="nom" prefWidth="75.0" text="nom" />
+            <TableColumn fx:id="prenom" prefWidth="75.0" text="prenom" />
+            <TableColumn fx:id="dn" prefWidth="75.0" text="dn" />
+            <TableColumn fx:id="gard_id" prefWidth="75.0" text="garderie" />
+            <TableColumn fx:id="parent" prefWidth="75.0" text="parent" />
+            <TableColumn fx:id="image" prefWidth="149.0" text="image" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
